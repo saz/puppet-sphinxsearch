@@ -1,4 +1,4 @@
-define sphinx::instance(
+define sphinxsearch::instance(
   $ensure = 'present',
   $source = undef,
   $content = undef,
