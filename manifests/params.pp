@@ -8,7 +8,7 @@ class sphinxsearch::params {
       $user = 'sphinx'
       $group = 'sphinx'
       $config_dir = '/etc/sphinx'
-      $work_dir = '/var/lib/sphinx'
+      $work_dir = '/var/lib/sphinx/index'
       $default_file = '/etc/default/searchd'
     }
     default: {
