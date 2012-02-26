@@ -1,4 +1,4 @@
-class sphinxsearch{
+class sphinxsearch(
   $ensure = 'present',
   $instances = [0],
   $config_dir = $sphinxsearch::params::config_dir,
