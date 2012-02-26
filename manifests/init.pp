@@ -86,7 +86,7 @@ class sphinxsearch(
     purge   => true,
     force   => true,
     require => Package[$package],
-    notify  => Service[$Service],
+    notify  => Service[$ervice],
   }
 
   file { $work_dir:
