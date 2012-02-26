@@ -1,6 +1,7 @@
 class sphinxsearch(
   $ensure = 'present',
   $instances = [0],
+  $config_source = undef,
   $config_dir = $sphinxsearch::params::config_dir,
   $default_file = $sphinxsearch::params::default_file,
   $work_dir = $sphinxsearch::params::work_dir,
@@ -102,6 +103,7 @@ class sphinxsearch(
 
   sphinxsearch::instance { $instances:
     ensure     => $file_ensure,
+    source     => $config_source,
     config_dir => $config_dir,
     user       => $user,
     group      => $group,
