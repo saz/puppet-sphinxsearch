@@ -100,7 +100,7 @@ class sphinxsearch{
     notify  => Service[$service],
   }
 
-  sphinx::instance { $instances:
+  sphinxsearch::instance { $instances:
     ensure     => $file_ensure,
     config_dir => $config_dir,
     user       => $user,
