@@ -1,7 +1,6 @@
 define sphinxsearch::instance(
   $ensure = 'present',
   $source = undef,
-  $content = undef,
   $config_dir = $sphinxsearch::params::config_dir,
   $user = $sphinxsearch::params::user,
   $group = $sphinxsearch::params::group,
@@ -19,8 +18,7 @@ define sphinxsearch::instance(
     owner   => $user,
     group   => $group,
     mode    => '0644',
-    source  => $source,
-    content => $content,
+    source  => "${source}/${instance_config_name}",
     require => $require,
     notify  => Service[$service],
   }
