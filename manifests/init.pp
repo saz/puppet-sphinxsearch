@@ -105,7 +105,7 @@ class sphinxsearch(
   $user = $sphinxsearch::params::user,
   $group = $sphinxsearch::params::group,
   $autoupgrade = false,
-  $package = $sphinxsearch::params::package
+  $package = $sphinxsearch::params::package,
   $service = $sphinxsearch::params::service,
   $service_ensure = 'running',
   $service_enable = true,
@@ -116,7 +116,7 @@ class sphinxsearch(
   $firewall = false,
   $firewall_tool = false,
   $firewall_src = false,
-  $firewall_dst = false,
+  $firewall_dst = false
 ) inherits sphinxsearch::params {
 
   validate_bool(
