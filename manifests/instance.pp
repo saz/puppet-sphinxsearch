@@ -17,7 +17,7 @@ define sphinxsearch::instance(
     ensure  => $ensure,
     owner   => $user,
     group   => $group,
-    mode    => '0644',
+    mode    => '0640',
     source  => "${source}/${instance_config_name}",
     require => $require,
     notify  => Service[$service],
